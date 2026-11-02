@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Studiq — Smart Study & Task Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1 class="mark">Studiq</h1>
+            <p>Plan smarter. Focus deeper. Never miss a deadline.</p>
+            <div class="sp"></div>
+            <button id="reset" title="Remove demo data">Reset</button>
+        </header>
+        <div class="stats" id="stats"></div>
+        <div class="layout">
+            <div class="col">
+                <div class="sec">
+                    <h2>Quick add <em><kbd>/</kbd> to focus</em></h2>
+                    <div class="qa"><input id="qa" aria-label="New task"
+                            placeholder="Finish ER diagram #DBMS fri high 2h" autocomplete="off"><button class="p"
+                            id="add">Add</button></div>
+                    <div class="hint" id="hint"></div>
+                </div>
+                <div class="sec">
+                    <h2>Today’s smart plan <em>Daily capacity <select id="cap">
+                                <option>2</option>
+                                <option selected>4</option>
+                                <option>6</option>
+                                <option>8</option>
+                            </select> h</em></h2>
+                    <div id="plan"></div>
+                </div>
+                <div class="sec">
+                    <h2>All tasks</h2>
+                    <div class="tabs" id="tabs"></div>
+                    <div id="list"></div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sec">
+                    <h2>Focus session</h2>
+                    <div class="clockwrap"><i class="sweep" id="sweep"></i>
+                        <div class="clock" id="clock">25:00</div>
+                    </div>
+                    <div class="m" id="tlab">Ready</div>
+                    <div class="row"><select id="tsub" aria-label="Subject"></select><select id="len"
+                            aria-label="Length">
+                            <option value="25">25 min</option>
+                            <option value="50">50 min</option>
+                            <option value="10">10 min</option>
+                            <option value="1">1 min (test)</option>
+                        </select></div>
+                    <div class="row"><button class="p" id="go">Start</button><button id="rs">Reset</button></div>
+                </div>
+                <div class="sec">
+                    <h2>Revision queue <em id="rn"></em></h2>
+                    <div id="rev"></div>
+                </div>
+                <div class="sec">
+                    <h2>Weekly goal by subject <em>5 h target</em></h2>
+                    <div id="subj"></div>
+                </div>
+            </div>
+        </div>
+        <div class="full">
+            <h2>Study heatmap <em>last 17 weeks</em></h2>
+            <div class="heatw">
+                <div class="heat" id="heat"></div>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    
+</body>
+
+</html>
